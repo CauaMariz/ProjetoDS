@@ -4,7 +4,6 @@ import java.awt.*;
 
 public class TelaPerfil extends JFrame {
 
-    // Campos
     private JTextField txtNome, txtDataNasc, txtTelefone, txtCPF, txtGenero;
     private JTextField txtEstado, txtCidade, txtRua, txtNumero;
     private JTextField txtEmail, txtStatus, txtNivel;
@@ -60,7 +59,6 @@ public class TelaPerfil extends JFrame {
         });
         setJMenuBar(barraMenu);
 
-        // ================= TOPO =====================
         JPanel topo = new JPanel(new BorderLayout());
         topo.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
@@ -71,7 +69,6 @@ public class TelaPerfil extends JFrame {
         btnVoltar.setPreferredSize(new Dimension(80, 35));
         btnVoltar.addActionListener(e -> dispose());
 
-        // Ícone placeholder
         JButton btnPerfil = new JButton("👤");
         btnPerfil.setBackground(new Color(52, 152, 219));
         btnPerfil.setForeground(Color.WHITE);
@@ -83,12 +80,10 @@ public class TelaPerfil extends JFrame {
 
         add(topo, BorderLayout.NORTH);
 
-        // ================= PAINEL PRINCIPAL =====================
         JPanel painel = new JPanel();
         painel.setLayout(new BoxLayout(painel, BoxLayout.Y_AXIS));
         painel.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
 
-        // ================= LINHA 1 (NOME + DATA) ================
         JPanel linha1 = new JPanel(new GridLayout(1, 2, 20, 0));
         txtNome = criarCampo("Nome");
         txtDataNasc = criarCampo("Data de Nascimento");
@@ -97,7 +92,6 @@ public class TelaPerfil extends JFrame {
         painel.add(linha1);
         painel.add(Box.createVerticalStrut(10));
 
-        // ================= LINHA 2 (TELEFONE + CPF + GÊNERO) ====
         JPanel linha2 = new JPanel(new GridLayout(1, 3, 20, 0));
         txtTelefone = criarCampo("Telefone");
         txtCPF = criarCampo("CPF");
@@ -108,7 +102,6 @@ public class TelaPerfil extends JFrame {
         painel.add(linha2);
         painel.add(Box.createVerticalStrut(10));
 
-        // ================= LINHA 3 (ESTADO + CIDADE + RUA + Nº) =
         JPanel linha3 = new JPanel(new GridLayout(1, 4, 20, 0));
         txtEstado = criarCampo("Estado");
         txtCidade = criarCampo("Cidade");
@@ -121,7 +114,6 @@ public class TelaPerfil extends JFrame {
         painel.add(linha3);
         painel.add(Box.createVerticalStrut(10));
 
-        // ================= LINHA 4 (EMAIL + STATUS + NÍVEL) =====
         JPanel linha4 = new JPanel(new GridLayout(1, 3, 20, 0));
         txtEmail = criarCampo("Email");
         txtStatus = criarCampo("Status");
@@ -132,7 +124,6 @@ public class TelaPerfil extends JFrame {
         painel.add(linha4);
         painel.add(Box.createVerticalStrut(15));
 
-        // ================= OBSERVAÇÕES + BOTÕES LATERAIS =========
         JPanel blocoObs = new JPanel(new BorderLayout(15, 0));
 
         txtObservacoes = new JTextArea();
@@ -146,7 +137,6 @@ public class TelaPerfil extends JFrame {
 
         blocoObs.add(scrollObs, BorderLayout.CENTER);
 
-        // LATERAL DIREITA (COMPRAS + REGISTRO)
         JPanel lateral = new JPanel();
         lateral.setLayout(new BoxLayout(lateral, BoxLayout.Y_AXIS));
 
@@ -174,7 +164,6 @@ public class TelaPerfil extends JFrame {
 
         add(painel, BorderLayout.CENTER);
 
-        // ================= RODAPÉ =====================
         JPanel rodape = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
 
         JButton btnExcluir = new JButton("Excluir");
@@ -198,7 +187,6 @@ public class TelaPerfil extends JFrame {
         setVisible(true);
     }
 
-    // Método auxiliar
     private JTextField criarCampo(String titulo) {
         JTextField campo = new JTextField();
         campo.setBorder(BorderFactory.createTitledBorder(titulo));

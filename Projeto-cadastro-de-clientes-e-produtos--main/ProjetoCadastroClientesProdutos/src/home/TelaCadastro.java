@@ -16,9 +16,6 @@ public class TelaCadastro extends JFrame {
         c.insets = new Insets(6, 6, 6, 6);
         c.fill = GridBagConstraints.HORIZONTAL;
 
-        // ============================
-        // TÍTULO
-        // ============================
         JLabel titulo = new JLabel("Cadastro de Usuário");
         titulo.setFont(new Font("Arial", Font.BOLD, 22));
         titulo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -30,9 +27,6 @@ public class TelaCadastro extends JFrame {
 
         c.gridwidth = 1;
 
-        // ============================
-        // NOME
-        // ============================
         c.gridy++;
         c.gridx = 0;
         panel.add(new JLabel("Nome:"), c);
@@ -43,9 +37,6 @@ public class TelaCadastro extends JFrame {
         panel.add(campoNome, c);
         c.gridwidth = 1;
 
-        // ============================
-        // CPF / CNPJ
-        // ============================
         c.gridy++;
         c.gridx = 0;
         panel.add(new JLabel("CPF / CNPJ:"), c);
@@ -67,9 +58,6 @@ public class TelaCadastro extends JFrame {
         c.gridx = 3;
         panel.add(cbCnpj, c);
 
-        // ============================
-        // DATA DE NASCIMENTO + SEXO
-        // ============================
         c.gridy++;
         c.gridx = 0;
         panel.add(new JLabel("Data de nasc:"), c);
@@ -98,9 +86,6 @@ public class TelaCadastro extends JFrame {
         c.gridx = 3;
         panel.add(sexoPanel, c);
 
-        // ============================
-        // EMAIL
-        // ============================
         c.gridy++;
         c.gridx = 0;
         panel.add(new JLabel("Email:"), c);
@@ -111,9 +96,6 @@ public class TelaCadastro extends JFrame {
         panel.add(campoEmail, c);
         c.gridwidth = 1;
 
-        // ============================
-        // ESTADO + CIDADE
-        // ============================
         c.gridy++;
         c.gridx = 0;
         panel.add(new JLabel("Estado:"), c);
@@ -133,9 +115,6 @@ public class TelaCadastro extends JFrame {
         c.gridx = 3;
         panel.add(campoCidade, c);
 
-        // ============================
-        // RUA
-        // ============================
         c.gridy++;
         c.gridx = 0;
         panel.add(new JLabel("Rua:"), c);
@@ -146,9 +125,6 @@ public class TelaCadastro extends JFrame {
         panel.add(campoRua, c);
         c.gridwidth = 1;
 
-        // ============================
-        // SENHA + CONFIRMAR
-        // ============================
         c.gridy++;
         c.gridx = 0;
         panel.add(new JLabel("Senha:"), c);
@@ -164,9 +140,6 @@ public class TelaCadastro extends JFrame {
         c.gridx = 3;
         panel.add(campoConfSenha, c);
 
-        // ============================
-        // BOTÃO Cadastrar-se (CENTRALIZADO)
-        // ============================
         JButton btnCadastrar = new JButton("Cadastrar-se");
 
         c.gridy++;
@@ -180,9 +153,6 @@ public class TelaCadastro extends JFrame {
 
         c.gridwidth = 1;
 
-        // ============================
-        // "Já tem uma conta?" + LOGIN
-        // ============================
         JLabel lblConta = new JLabel("Já tem uma conta?");
         JButton btnLogin = new JButton("Login");
 
@@ -193,16 +163,10 @@ public class TelaCadastro extends JFrame {
         c.gridx = 1;
         panel.add(btnLogin, c);
 
-        // ============================
-        // Botão SAIR
-        // ============================
         JButton btnSair = new JButton("Sair");
         c.gridx = 3;
         panel.add(btnSair, c);
 
-        // ============================
-        // AÇÕES DOS BOTÕES
-        // ============================
         btnCadastrar.addActionListener(e -> {
             JOptionPane.showMessageDialog(this,
                     "Cadastro realizado!",

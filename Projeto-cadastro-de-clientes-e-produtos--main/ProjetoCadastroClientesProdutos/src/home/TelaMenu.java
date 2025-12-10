@@ -7,10 +7,8 @@ import java.util.ArrayList;
 
 public class TelaMenu extends JFrame {
 
-    // Referência ao bloco selecionado
     private JPanel blocoSelecionado = null;
 
-    // Listas com todos os blocos (clientes e produtos)
     private final java.util.List<JPanel> blocosCliente = new ArrayList<>();
     private final java.util.List<JPanel> blocosProduto = new ArrayList<>();
 
@@ -21,7 +19,6 @@ public class TelaMenu extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // ================= CABEÇALHO ===================
         JPanel topo = new JPanel(new BorderLayout());
         topo.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
@@ -34,7 +31,6 @@ public class TelaMenu extends JFrame {
 
         add(topo, BorderLayout.NORTH);
 
-        // ================= ABAS =======================
         JTabbedPane abas = new JTabbedPane();
         abas.setFont(new Font("Arial", Font.BOLD, 14));
 
@@ -46,15 +42,11 @@ public class TelaMenu extends JFrame {
         setVisible(true);
     }
 
-    // ============================================================
-    // ========================== ABA CLIENTE ======================
-    // ============================================================
     private JPanel criarAbaCliente() {
 
         JPanel painel = new JPanel(new BorderLayout());
         painel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        // ========= BARRA DE PESQUISA ==========
         JPanel barraPesquisa = new JPanel(new BorderLayout());
 
         JTextField txtPesquisa = new JTextField();
@@ -69,11 +61,9 @@ public class TelaMenu extends JFrame {
         barraPesquisa.add(txtPesquisa, BorderLayout.CENTER);
         painel.add(barraPesquisa, BorderLayout.NORTH);
 
-        // ========= LISTAGEM DE CLIENTES =========
         JPanel listaClientes = new JPanel();
         listaClientes.setLayout(new BoxLayout(listaClientes, BoxLayout.Y_AXIS));
 
-        // 3 blocos de exemplo (altura dinâmica)
         for (int i = 0; i < 3; i++) {
             JPanel bloco = criarBlocoCliente(listaClientes);
             blocosCliente.add(bloco);
@@ -83,7 +73,6 @@ public class TelaMenu extends JFrame {
 
         painel.add(new JScrollPane(listaClientes), BorderLayout.CENTER);
 
-        // ========= RODAPÉ ==========
         JPanel rodape = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
 
         JButton btnCadastrar = new JButton("Cadastrar Cliente");
@@ -91,7 +80,6 @@ public class TelaMenu extends JFrame {
         btnCadastrar.setForeground(Color.WHITE);
         btnCadastrar.setPreferredSize(new Dimension(180, 40));
         btnCadastrar.addActionListener(e -> {
-            // Placeholder — será implementado futuramente
             new cadastroCliente();
         });
 
@@ -123,7 +111,6 @@ public class TelaMenu extends JFrame {
             }
         });
 
-        // Campos (altura automática)
         JPanel campos = new JPanel();
         campos.setLayout(new BoxLayout(campos, BoxLayout.Y_AXIS));
 
@@ -222,9 +209,6 @@ public class TelaMenu extends JFrame {
         }
     }
 
-    // ============================================================
-    // ========================== ABA PRODUTO ======================
-    // ============================================================
     private JPanel criarAbaProduto() {
 
         JPanel painel = new JPanel(new BorderLayout());
@@ -247,7 +231,6 @@ public class TelaMenu extends JFrame {
         JButton btnCadastrar = new JButton("Cadastrar Produto");
         btnCadastrar.setPreferredSize(new Dimension(180, 40));
         btnCadastrar.addActionListener(e -> {
-            // placeholder
             System.out.println("Tela de cadastro de produto ainda será criada.");
         });
 
@@ -324,9 +307,6 @@ public class TelaMenu extends JFrame {
         return bloco;
     }
 
-    // ============================================================
-    // ========================== MAIN =============================
-    // ============================================================
     public static void main(String[] args) {
         SwingUtilities.invokeLater(TelaMenu::new);
     }
