@@ -65,11 +65,16 @@ public class TelaPerfil extends JFrame {
         topo.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         JButton btnVoltar = new JButton("Voltar");
+        btnVoltar.setBackground(new Color(52, 152, 219));
+        btnVoltar.setForeground(Color.WHITE);
+
         btnVoltar.setPreferredSize(new Dimension(80, 35));
         btnVoltar.addActionListener(e -> dispose());
 
         // Ícone placeholder
         JButton btnPerfil = new JButton("👤");
+        btnPerfil.setBackground(new Color(52, 152, 219));
+        btnPerfil.setForeground(Color.WHITE);
         btnPerfil.setPreferredSize(new Dimension(60, 35));
         btnPerfil.setFocusable(false);
 
@@ -146,14 +151,16 @@ public class TelaPerfil extends JFrame {
         lateral.setLayout(new BoxLayout(lateral, BoxLayout.Y_AXIS));
 
         JButton btnCompras = new JButton("Compras");
+        btnCompras.setBackground(new Color(52, 152, 219));
+        btnCompras.setForeground(Color.WHITE);
         btnCompras.setPreferredSize(new Dimension(180, 40));
-        btnCompras.setMaximumSize(new Dimension(200, 40));
         btnCompras.addActionListener(e ->
                 System.out.println("Tela de compras ainda será criada."));
 
         JButton btnRegistro = new JButton("Registro de alterações");
+        btnRegistro.setBackground(new Color(52, 152, 219));
+        btnRegistro.setForeground(Color.WHITE);
         btnRegistro.setPreferredSize(new Dimension(180, 40));
-        btnRegistro.setMaximumSize(new Dimension(200, 40));
         btnRegistro.addActionListener(e ->
                 System.out.println("Tela de registro será criada futuramente."));
 

@@ -79,6 +79,9 @@ public class Login extends JFrame {
         mainPanel.add(Box.createVerticalStrut(15));
 
         loginButton = new JButton("Fazer Login");
+        loginButton.setBackground(new Color(52, 152, 219));
+        loginButton.setForeground(Color.WHITE);
+        loginButton.setPreferredSize(new Dimension(150, 30));
         loginButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         loginButton.setPreferredSize(new Dimension(150, 30));
         loginButton.setMaximumSize(loginButton.getPreferredSize());
@@ -90,6 +93,9 @@ public class Login extends JFrame {
         registerPanel.add(new JLabel("Não tem uma conta ainda?"));
 
         registerButton = new JButton("Cadastrar");
+        registerButton.setBackground(new Color(52, 152, 219));
+        registerButton.setForeground(Color.WHITE);
+        registerButton.setPreferredSize(new Dimension(100, 30));
         registerPanel.add(registerButton);
         registerPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
@@ -137,16 +143,15 @@ public class Login extends JFrame {
             }
         });
 
-        /*Usar depois quando tiver a tela do arthur
         //Conexao do botao logar para a tela menu
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new telaMenu().setVisible(true);
+                new TelaMenu().setVisible(true);
                 dispose();
             }
         });
-        */
+        
 
         //Conexao do botao cadastrar para a tela de cadastro
         registerButton.addActionListener(new ActionListener() {

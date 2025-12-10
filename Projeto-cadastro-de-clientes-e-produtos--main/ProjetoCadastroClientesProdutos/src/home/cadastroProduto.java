@@ -102,6 +102,9 @@ public class cadastroProduto extends JFrame{
 
         JPanel painelBotaoProduto = new JPanel();
         botaoCadastrarProduto = new JButton("Cadastrar");
+        botaoCadastrarProduto.setBackground(new Color(52, 152, 219)); // azul
+        botaoCadastrarProduto.setForeground(Color.WHITE);
+        botaoCadastrarProduto.setPreferredSize(new Dimension(150, 30));
         c.gridx = 0;
         c.gridy = 9;
         c.gridwidth = 5;
